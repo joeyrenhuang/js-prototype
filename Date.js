@@ -37,7 +37,7 @@ p.__time = function(s) {
  */
 p.__str = function(s = 'yyyy-mm-dd hh:mm:ss') {
   let y = this.getFullYear().__padStart('0', 4),
-      m = this.getMonth().__padStart('0', 2),
+      m = (this.getMonth() + 1).__padStart('0', 2),
       d = this.getDate().__padStart('0', 2),
       hh = this.getHours().__padStart('0', 2),
       mm = this.getMinutes().__padStart('0', 2),
