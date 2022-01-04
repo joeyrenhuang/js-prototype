@@ -1,5 +1,5 @@
-require('../index.js');
-var assert = require('assert');
+import '../src/index.js'
+import assert from 'assert'
 var fns = ['__bf', '__bfm', '__bfy', '__date', '__time', '__y', '__m', '__d', '__h', '__mm', '__s']
 describe('Date', function() {
   let d = new Date();

@@ -1,5 +1,5 @@
-require('../index.js');
-var assert = require('assert');
+import '../src/index.js'
+import assert from 'assert'
 describe('NString', function() {
   describe('#__wc()', function() {
     let n = 123456789
