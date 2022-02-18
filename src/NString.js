@@ -7,13 +7,13 @@ sp.__padStart = np.__padStart = function() {
 np.__tstr = function(s = ['Years', 'Months', 'Days', 'Hours', 'Minutes', 'Seconds']) {
   let self = this;
   let ymdhms = [0, 0, 0, 0, 0, 0];
-  ['Y', 'M', 'D', 'H', 'MM', 'S'].forEach((x, i) => {
+  ['Y', 'M', 'D', 'HH', 'MM', 'SS'].forEach((x, i) => {
     ymdhms[i] = Math.floor(self / Date['__' + x])
     self = self % Date['__' + x]
   }) 
   return ymdhms.map((x, i) => {
     return x ? x + s[i] || '' : ''
-  }).join('')
+  }).filter(x => x).join(' ')
 }
 // with commas
 sp.__wc = np.__wc = function() {
