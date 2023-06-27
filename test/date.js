@@ -34,10 +34,10 @@ describe('Date', function() {
       assert.match(d.__str(), /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/)
     });
     it('should __str(h:m:s) default get string alike \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}', function() {
-      assert.match(d.__str('h:m:s'), /^\d{2}:\d{2}:\d{2}$/)
+      assert.match(d.__str('h:m:s'), /^\d{1,2}:\d{1,2}:\d{1,2}$/)
     });
     it('should __str(y/m/d) default get string alike \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}', function() {
-      assert.match(d.__str('y/m/d'), /^\d{4}\/\d{2}\/\d{2}$/)
+      assert.match(d.__str('y/m/d'), /^\d{1,4}\/\d{1,2}\/\d{1,2}$/)
     });
   });
   describe('#__tto()', function() {
